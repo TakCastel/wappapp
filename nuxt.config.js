@@ -9,7 +9,7 @@ module.exports = {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      { rel: 'stylesheet', type: 'text/css', href: 'https://fonts.googleapis.com/css?family=Material+Icons' }
+      { rel: 'stylesheet', type: 'text/css', href: 'https://fonts.googleapis.com/css?family=Muli:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i|Material+Icons' }
     ]
   },
 
@@ -44,11 +44,6 @@ module.exports = {
         name: 'index',
         path: '/',
         component: 'pages/index.vue'
-      },
-      {
-        name: 'podcast',
-        path: '/podcast',
-        component: 'pages/podcast.vue'
       },
     ]
   },

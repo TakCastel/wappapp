@@ -10,9 +10,9 @@
         <v-list>
           <router-link 
           v-for="item in menu" 
-          :key="item.key" 
+          :key="item.id"
+          @click.native="handleClick()"
           :to="{path: item.link}"
-          @click="handleClick()" 
         >
             <v-list-tile>
               <v-list-tile-action>
@@ -66,9 +66,6 @@ export default {
       },
     ],
   }),
-  props: {
-    source: String,
-  },
   methods: {
     handleClick() {
       this.drawer = false;
@@ -80,14 +77,10 @@ export default {
 <style scoped>
 body {
   margin: 0;
-}
-
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: 'Muli', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-size: 100%;
-  color: #2c3e50;
 }
 
 main {

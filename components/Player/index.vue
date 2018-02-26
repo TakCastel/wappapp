@@ -1,3 +1,4 @@
+
 <template>
   <div class="player">
     Hello !
@@ -5,6 +6,8 @@
 </template>
 
 <script>
+// Important note : When imported, the player MUST be displayed as last tag element
+
 export default {
   name: 'Player',
 };
@@ -13,9 +16,9 @@ export default {
 <style scoped>
   .player {
     position: absolute;
-    padding: 2rem;
     background: #212121;
-    bottom: 2rem;
+    padding: 2rem;
+    bottom: 32px;
     left: 0;
     right: 0;
   }
