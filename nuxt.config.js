@@ -40,7 +40,7 @@ module.exports = {
   // Onesignal options
   oneSignal: {
     init: {
-      appId: '4688e9e6-560f-4d39-994e-8afa61051151',
+      appId: '657d9729-bb38-415d-b821-bbc0de6804ed',
       allowLocalhostAsSecureOrigin: true,
       welcomeNotification: {
           disable: true
