@@ -9,8 +9,16 @@ module.exports = {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      { rel: 'stylesheet', type: 'text/css', href: 'https://fonts.googleapis.com/css?family=Muli:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i|Material+Icons' }
+      { rel: 'stylesheet', type: 'text/css', href: 'https://fonts.googleapis.com/css?family=Muli:300,400,600,700|Material+Icons' },
+    ],
+    script: [
+      { src: 'https://cdn.onesignal.com/sdks/OneSignalSDK.js' },
     ]
+  },
+
+  // Manifest JSON
+  manifest: {
+    theme_color: '#3B8070'
   },
 
   // Plugins import
@@ -20,19 +28,25 @@ module.exports = {
   
   // Progressive web app module
   modules: [
-    // '@nuxtjs/onesignal',
+    '@nuxtjs/onesignal',
     '@nuxtjs/pwa',
   ],
 
-  // oneSignal: {
-  //   init: {
-  //     appId: 'YOUR_APP_ID',
-  //     allowLocalhostAsSecureOrigin: true,
-  //     welcomeNotification: {
-  //         disable: true
-  //     }
-  //   }
-  // },
+  // Service workers offline mode
+  workbox: {
+    // Workbox options
+  },
+
+  // Onesignal options
+  oneSignal: {
+    init: {
+      appId: '4688e9e6-560f-4d39-994e-8afa61051151',
+      allowLocalhostAsSecureOrigin: true,
+      welcomeNotification: {
+          disable: true
+      }
+    }
+  },
 
   // Customize progress bar
   loading: { color: '#3B8070' },
